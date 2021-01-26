@@ -8,7 +8,6 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "privileges")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -18,6 +17,7 @@ public class Privilege {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column
     private String name;
 
     @ManyToMany(mappedBy = "privileges")
